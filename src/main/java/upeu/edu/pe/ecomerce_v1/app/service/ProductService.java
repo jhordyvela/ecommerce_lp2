@@ -6,8 +6,11 @@ package upeu.edu.pe.ecomerce_v1.app.service;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
+import upeu.edu.pe.ecomerce_v1.app.repository.CategoriesRepository;
 import upeu.edu.pe.ecomerce_v1.app.repository.ProductRepository;
+import upeu.edu.pe.ecomerce_v1.infrastructure.entity.CategoryEntity;
 import upeu.edu.pe.ecomerce_v1.infrastructure.entity.ProductEntity;
 import upeu.edu.pe.ecomerce_v1.infrastructure.entity.UserEntity;
 
@@ -25,6 +28,7 @@ public class ProductService {
     }
   
     //metodos
+    
     public Iterable<ProductEntity> getProducts(){
         return  productRepository.getProducts();
     }
@@ -65,4 +69,9 @@ public class ProductService {
         return productRepository.deleteProductById(id);
   
     }
+    
+    
+   
+  
 }
+

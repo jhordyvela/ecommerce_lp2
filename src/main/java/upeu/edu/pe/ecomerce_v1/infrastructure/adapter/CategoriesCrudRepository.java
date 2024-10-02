@@ -5,13 +5,12 @@
 package upeu.edu.pe.ecomerce_v1.infrastructure.adapter;
 
 import org.springframework.data.repository.CrudRepository;
-import upeu.edu.pe.ecomerce_v1.infrastructure.entity.ProductEntity;
-import upeu.edu.pe.ecomerce_v1.infrastructure.entity.UserEntity;
+import upeu.edu.pe.ecomerce_v1.infrastructure.entity.CategoryEntity;
 
 /**
  *
- * @author tpp
+ * @author Support HP
  */
-public interface ProductCrudRepository extends  CrudRepository<ProductEntity, Integer>{
-     Iterable<ProductEntity>findByUserEntity(UserEntity userEntity);
+public interface CategoriesCrudRepository extends CrudRepository<CategoryEntity, Integer>{
+    
 }

@@ -12,27 +12,28 @@ import java.time.LocalDateTime;
  *
  * @author tpp
  */
-@Table(name="products")
+@Table(name = "products")
 @Entity
 public class ProductEntity {
+
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String  code;
-    private String  name;
-    private String  description;
-    private String  image;
-    private BigDecimal  price;
-    private LocalDateTime  dateCreated;
-    private LocalDateTime  dateUpdated;
+    private String code;
+    private String name;
+    private String description;
+    private String image;
+    private BigDecimal price;
+    private LocalDateTime dateCreated;
+    private LocalDateTime dateUpdated;
     @ManyToOne
     @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
-      @ManyToOne
+    @ManyToOne
     @JoinColumn(name = "category_id")
-   
-      private CategoryEntity categoryEntity;
+    private CategoryEntity categoryEntity;
+
     public ProductEntity() {
     }
 
@@ -48,7 +49,6 @@ public class ProductEntity {
         this.userEntity = userEntity;
         this.categoryEntity = categoryEntity;
     }
-
 
     public Integer getId() {
         return id;
@@ -129,5 +129,5 @@ public class ProductEntity {
     public void setCategoryEntity(CategoryEntity categoryEntity) {
         this.categoryEntity = categoryEntity;
     }
-    
-    }
+
+}
